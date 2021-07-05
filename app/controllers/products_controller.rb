@@ -58,7 +58,7 @@ class ProductsController < ApplicationController
   end
 
   def bulk_uploads
-    @upload = ProductJob.perform_async(params[:products_file])
+    @upload = ProductJobWorker.perform_in(1,params[:products_file])
     redirect_to products_path, :notice => "Products are Statred to upload"
   end
   
