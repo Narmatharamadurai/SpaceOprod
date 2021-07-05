@@ -6,31 +6,18 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+    2.6.0
 
-* System dependencies
-
-* Configuration
+* Installation steps and dependencies
+    bundle install     
 
 * Database creation
+    rake db:create
+    rake db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Starting Sidekiq 
+    bundle exec sidekiq
 
 * Deployment instructions
-
-* ...
-
-* installation steps
-
-* bundle install
-
-* rake db:create
-
-* rake db:migrate
-
-* rails webpacker:install 
-
-* rails s
+    rails webpacker:install
+    rails s -p 3000
